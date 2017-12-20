@@ -7,9 +7,9 @@ body {
     background: repeating-linear-gradient(
     -35deg,
     #c1eac1,
-    #c1fac1 10px,
-    #c1ffc1 10px,
-    #c1ffc1 10px
+    #c1fac1 50px,
+    #c1ffc1 50px,
+    #c1ffc1 50px
   );
 }
 
@@ -18,6 +18,10 @@ body {
   background-color: #E0E0E0;
   border-color: #E0E0E0;
   position: -webkit-sticky;
+}
+
+.navbar-brand {
+  color: green;
 }
 
 .footer {
@@ -63,10 +67,9 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 70px;
-    padding: 1rem 10rem;
-    background-color: #e3e3e3;
-    border-width: 2px;
-    border-color: #c1eac1;
+    padding: 1rem 8rem;
+    border-width: 30px;
+    border-color: purple;/*#c1eac1;*/
 }
 
 .post h1 a, .post h1 a:visited {
@@ -75,4 +78,21 @@ h1, h2, h3, h4 {
 
 .comment {
     margin: 20px 0px 20px 20px;
+}
+
+hr {
+  background: black;
+  border-width: 3px;
+}
+
+.content-block {
+  padding-top: 3rem;
+  margin-bottom: 10rem;
+  background-color: #f7f7f7;
+  border-width: 10px;
+  border-color: red;
+}
+
+.container-fluid {
+  font-family: 'Patua One', cursive;
 }

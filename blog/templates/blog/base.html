@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
 
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -28,27 +29,31 @@
               <ul class="nav navbar-nav">
                 <li><a href="{% url 'post_list' %}">Restaurants</a></li>
                 {% if user.is_authenticated %}
-                  <li><a href="{% url 'post_new' %}">Post Your Restaurant</a></li>
+                  <li><a href="{% url 'post_new' %}">Add Restaurant</a></li>
+                  <li><a href="{% url 'post_draft_list' %}">View Drafts</a>
                 {% endif %}
-                <li><a href="">Contact</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 {% if not user.is_authenticated %}
                 <li><a href=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href=""><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 {% endif %}
                 {% if user.is_authenticated %}
-                <li><a href=""><span class="glyphicon glyphicon-user"></span> Currently logged in as {{request.user}}</a></li>
-                <li><a href=""><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-user"></span> Hello, {{request.user}}</a></li>
+                <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 {% endif %}
               </ul>
             </div>
           </div>
         </nav>
-
-        {% block content %}
-        {% endblock %}
-
+        <div class="container content-block">
+            <div class="row">
+                <div class="col-lg-12 col-md-10 mx-auto">
+                  {% block content %}
+                  {% endblock %}
+                </div>
+            </div>
+        </div>
         <footer class="footer">
           <div class="container">
             <ul class="list-inline text-center">
