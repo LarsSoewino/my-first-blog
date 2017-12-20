@@ -1,16 +1,57 @@
+<<<<<<< HEAD
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-10 mx-auto">
+                <div class="post">
+                    {% if post.published_date %}
+                        <div class="date">
+                            {{ post.published_date }}
+                        </div>
+                    {% endif %}
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+
+                    <br>
+
+                    <div>
+                      {% if user.is_authenticated %}
+                        <li><a href="{% url 'post_new_review' %}">Post Review</a></li>
+                      {% endif %}
+                    </div>
+                </div>
             </div>
-        {% endif %}
-        {% if user.is_authenticated %}
-             <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-        {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        </div>
     </div>
 {% endblock %}
+=======
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-10 mx-auto">
+                <div class="post">
+                    {% if post.published_date %}
+                        <div class="date">
+                            {{ post.published_date }}
+                        </div>
+                    {% endif %}
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+
+                    <br>
+
+                    <div>
+                      {% if user.is_authenticated %}
+                        <li><a href="{% url 'post_new_review' %}">Post Review</a></li>
+                      {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+>>>>>>> 6a2a09b7ee2b72af64ad30169749142c45881ae9
