@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50892ee861f7e2a249e1f28027a9d4343d20b2f2
 {% extends 'blog/base.html' %}
 
 {% block content %}
@@ -55,3 +59,35 @@
     </div>
 {% endblock %}
 >>>>>>> 6a2a09b7ee2b72af64ad30169749142c45881ae9
+<<<<<<< HEAD
+=======
+=======
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-10 mx-auto">
+                <div class="post">
+                    {% if post.published_date %}
+                        <div class="date">
+                            {{ post.published_date }}
+                        </div>
+                    {% endif %}
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+
+                    <br>
+
+                    <div>
+                      {% if user.is_authenticated %}
+                        <li><a href="{% url 'post_new_review' %}">Post Review</a></li>
+                      {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+>>>>>>> origin/master
+>>>>>>> 50892ee861f7e2a249e1f28027a9d4343d20b2f2
