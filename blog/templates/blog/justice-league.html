@@ -1,0 +1,91 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+          <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
+{% extends 'blog/base.html' %}
+
+
+<!--post-detail-->
+
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+             <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+
+{% endblock %}
+
+<!-- post_list -->
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+<!--forms.py-->
+#class ReviewForm(forms.ModelForm):
+#
+#    class ReviewSection:
+#        model = Review
+#        fields = ('title', 'text',)
+
+<!-- models.py -->
+#class Review(models.Model):
+#    post = models.ForeignKey('blog.Post')
+#    author = models.ForeignKey('auth.User')
+#    text = models.TextField()
+#    created_date = models.DateTimeField(
+#            default=timezone.now)
+#    posted_review = models.BooleanField(
+#            default=False)
+#
+#    def approve(self):
+#        self.posted_review = True
+#        self.save()
+#
+#    def __str__(self):
+#        return self.text
+
+<!--views.py-->
+#def post_new_review(request, pk):
+#    post = get_object_or_404(Post, pk=pk)
+#    if request.method == "POST":
+#        form = ReviewForm(request.POST)
+#        if form.is_valid():
+#            review = form.save(commit=False)
+#            review.author = request.user
+#            review.published_date = timezone.now()
+#            review.post = post
+#            review.save()
+#            return redirect('post_detail', pk=post.pk)
+#    else:
+#        form = ReviewForm()
+#    return render(request, 'blog/post_new_review.html', {'form': form})
