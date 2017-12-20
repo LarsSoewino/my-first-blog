@@ -4,20 +4,48 @@ h1 a {
 }
 
 body {
-    padding-left: 15px;
+    background: repeating-linear-gradient(
+    -35deg,
+    #c1eac1,
+    #c1fac1 10px,
+    #c1ffc1 10px,
+    #c1ffc1 10px
+  );
 }
 
-.page-header {
-    background-color: #ff9400;
+.navbar {
+  font-family: 'Lora', 'Times New Roman', serif;
+  background-color: #E0E0E0;
+  border-color: #E0E0E0;
+  position: -webkit-sticky;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #5C4033;
+}
+
+html {
+  position: relative;
+}
+
+
+
+/*.page-header {
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    text-align: center;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: #92c992;
     font-size: 36pt;
     text-decoration: none;
-}
+}*/
 
 .content {
     margin-left: 40px;
@@ -40,7 +68,7 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: #eeeeee;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
@@ -48,6 +76,10 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 70px;
+    padding: 1rem 10rem;
+    background-color: #e5e5e5;
+    border-width: 2px;
+    border-color: #c1eac1;
 }
 
 .post h1 a, .post h1 a:visited {
