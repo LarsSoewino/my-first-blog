@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'blog/base.html' %}
 
 {% block content %}
@@ -7,3 +8,14 @@
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
 {% endblock %}
+=======
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>New restaurant</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+>>>>>>> 6a2a09b7ee2b72af64ad30169749142c45881ae9
