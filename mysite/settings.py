@@ -28,6 +28,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', 's164274.pythonanywhere.com']
 
 LOGIN_REDIRECT_URL = '/'
+
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
+REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'registration',
 ]
 
 MIDDLEWARE = [
