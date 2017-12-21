@@ -18,9 +18,16 @@ from django.contrib import admin
 
 from django.contrib.auth import views
 
+from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework.documentation import include_docs_urls
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/login/$', views.login, name='login'),
     url(r'^accounts/logout/$', views.logout, name='logout', kwargs={'next_page': '/'}),
     url(r'', include('blog.urls')),
+    url(r'^', include('blog.api.urls')),
+    url(r'^docs/', include_docs_urls(title='api')),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)

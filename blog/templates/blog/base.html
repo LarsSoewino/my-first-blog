@@ -53,6 +53,16 @@
                 <div class="col-lg-12 col-md-10 mx-auto">
                   {% block content %}
                   {% endblock %}
+                  <i class="fa fa-cutlery" aria-hidden="true" style="#DF4444"></i><a class="learn-more brand-name" id="displayText" href="javascript:toggle()"> Food for Thought</a><div id="toggleText" style="display: none">
+                    <p class="fft-info"></p>
+                    <p class="fft-info">Food for Thought was created in 2017 by a Eindhoven University</p>
+                    <p class="fft-info">of Technology student with the s-number s164274. The website is</p>
+                    <p class="fft-info">made for an assignment of the course 2ID60 Web technology. The</p>
+                    <p class="fft-info">task for the assignment is build a complete web app using Django,</p>
+                    <p class="fft-info">including a well-designed, responsive front-end, and a backend with</p>
+                    <p class="fft-info">data storage and its own REST API to return data belonging to your</p>
+                    <p class="fft-info">application.</p>
+                  </div>
                 </div>
             </div>
         </div>
@@ -92,5 +102,6 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="static\js\expandAndCollapse.js"></script>
     </body>
 </html>

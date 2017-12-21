@@ -11,6 +11,7 @@ body {
     #c1ffc1 50px,
     #c1ffc1 50px
   );
+    background-attachment: fixed;
 }
 
 .navbar {
@@ -29,10 +30,9 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
-  line-height: 60px; /* Vertically center the text there */
-  background-color: white;
+  line-height: 60px;
+  background-color: #ededed;
 }
 
 html {
@@ -103,13 +103,16 @@ hr {
 
 .content-block {
   padding-top: 3rem;
-  margin-bottom: 10rem;
+  margin-bottom: 10em;
   border-radius: 10px;
-  background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffff), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
 }
 
 .container-fluid {
@@ -122,4 +125,14 @@ img {
   width: 80%;
   padding-top: 1rem;
   padding-bottom: 6rem;
+}
+
+.learn-more {
+  font-size: 15px;
+  line-height: 100%;
+  margin-bottom: 3rem;
+}
+
+.fft-info {
+  line-height: 50%;
 }
