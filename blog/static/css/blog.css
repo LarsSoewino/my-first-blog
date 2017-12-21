@@ -1,6 +1,6 @@
 h1 a {
     color: #FCA205;
-    font-family: 'Lobster';
+    font-family: 'Patua One', cursive;
 }
 
 body {
@@ -21,7 +21,8 @@ body {
 }
 
 .navbar-brand {
-  color: green;
+  color: #DF4444 !important;
+  font-family: 'Lobster', cursive;
 }
 
 .footer {
@@ -38,12 +39,29 @@ html {
   position: relative;
 }
 
+.welcome-message, .slogan {
+  text-align: center;
+}
+
+.welcome-message {
+  font-size: 60px;
+}
+
+.slogan {
+  font-size: 30px;
+}
+
+.brand-name {
+  color: #DF4444;
+  font-family: 'Lobster', cursive !important;
+}
+
 .content {
     margin-left: 40px;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Patua One', cursive;
 }
 
 .date {
@@ -68,8 +86,6 @@ h1, h2, h3, h4 {
 .post {
     margin-bottom: 70px;
     padding: 1rem 8rem;
-    border-width: 30px;
-    border-color: purple;/*#c1eac1;*/
 }
 
 .post h1 a, .post h1 a:visited {
@@ -89,8 +105,6 @@ hr {
   padding-top: 3rem;
   margin-bottom: 10rem;
   background-color: #f7f7f7;
-  border-width: 10px;
-  border-color: red;
 }
 
 .container-fluid {
