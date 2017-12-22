@@ -9,4 +9,4 @@ function toggle() {
 		ele.style.display = "block";
 		text.innerHTML = " Food for Thought";
 	}
-}
+}   

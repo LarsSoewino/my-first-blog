@@ -12,6 +12,9 @@
 
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
     </head>
     <body>
         <nav class="navbar navbar-default navbar-static-top" id="sticky-header">
@@ -51,24 +54,27 @@
         <div class="container content-block">
             <div class="row">
                 <div class="col-lg-12 col-md-10 mx-auto">
-                  {% block content %}
-                  {% endblock %}
-                  <i class="fa fa-cutlery" aria-hidden="true" style="#DF4444"></i><a class="learn-more brand-name" id="displayText" href="javascript:toggle()"> Food for Thought</a><div id="toggleText" style="display: none">
-                    <p class="fft-info"></p>
-                    <p class="fft-info">Food for Thought was created in 2017 by a Eindhoven University</p>
-                    <p class="fft-info">of Technology student with the s-number s164274. The website is</p>
-                    <p class="fft-info">made for an assignment of the course 2ID60 Web technology. The</p>
-                    <p class="fft-info">task for the assignment is build a complete web app using Django,</p>
-                    <p class="fft-info">including a well-designed, responsive front-end, and a backend with</p>
-                    <p class="fft-info">data storage and its own REST API to return data belonging to your</p>
-                    <p class="fft-info">application.</p>
-                  </div>
+                    {% block content %}
+                    {% endblock %}
+                <i class="fa fa-cutlery" aria-hidden="true" style="#DF4444"></i><a class="learn-more brand-name" id="displayText" href="javascript:toggle()"> Food for Thought</a><div id="toggleText" style="display: none">
+                  <p class="fft-info"></p>
+                  <p class="fft-info">Food for Thought was created in 2017 by a Eindhoven University</p>
+                  <p class="fft-info">of Technology student with the s-number s164274. The website is</p>
+                  <p class="fft-info">made for an assignment of the course 2ID60 Web technology. The</p>
+                  <p class="fft-info">task for the assignment is build a complete web app using Django,</p>
+                  <p class="fft-info">including a well-designed, responsive front-end, and a backend with</p>
+                  <p class="fft-info">data storage and its own REST API to return data belonging to your</p>
+                  <p class="fft-info">application.</p>
                 </div>
             </div>
+        </div>
         </div>
         <footer class="footer">
           <div class="container">
             <ul class="list-inline text-center">
+              <li>
+                <p class="show-me">Food for Thought 2017<p>
+              </li>
               <li class="list-inline-item">
                 <a href="https://twitter.com/" target="_blank">
                   <span class="fa-stack fa-lg">
@@ -89,7 +95,7 @@
                 <a href="https://instagram.com/" target="_blank">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -97,11 +103,14 @@
           </div>
         </footer>
 
+        <script type="text/javascript" src="{% static 'js/expandAndCollapse.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/stickynavbar.js' %}"></script>
+
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="static\js\expandAndCollapse.js"></script>
+
     </body>
 </html>

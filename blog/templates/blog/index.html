@@ -1,9 +1,9 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h1 class="welcome-message">Welcome to <p class="brand-name"><i class="fa fa-cutlery" aria-hidden="true"></i> Food for Thought</p></h1>
-    <h4 class="slogan">Get to know your local restaurant</h4>
-    <a href="{% url 'post_list' %}"><img src="https://99579739b47483c3f833-85c63fcb8080dafe29b50dc382032710.ssl.cf1.rackcdn.com/XLGallery/she1776re-202218-Local.jpg" alt="restaurant"></a>
+            <h1 class="welcome-message">Welcome to <p class="brand-name"><i class="fa fa-cutlery" aria-hidden="true"></i> Food for Thought</p></h1>
+            <h4 class="slogan">Get to know your local restaurant</h4>
+            <a href="{% url 'post_list' %}"><img src="https://99579739b47483c3f833-85c63fcb8080dafe29b50dc382032710.ssl.cf1.rackcdn.com/XLGallery/she1776re-202218-Local.jpg" alt="restaurant"></a>
 
-    <h4 class="slogan" style="#c1eac1"><a href="{% url 'post_list' %}">Show me the restaurants</a></h4>
+            <h4 class="slogan show-me"><a href="{% url 'post_list' %}">Show me the restaurants</a></h4>
 {% endblock %}
